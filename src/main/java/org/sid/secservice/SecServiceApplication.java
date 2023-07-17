@@ -28,9 +28,9 @@ public class SecServiceApplication {
         return new BCryptPasswordEncoder();
     }
 
-  //  @Bean
-  // CommandLineRunner start(AccountService accountService){
-      //  return args ->{
+    @Bean
+   CommandLineRunner start(AccountService accountService){
+        return args ->{
        //     accountService.addNewRole(new AppRole(null,"USER"));
           //  accountService.addNewRole(new AppRole(null,"ADMIN"));
         //   accountService.addNewRole(new AppRole(null,"CUSTOMMER_MANAGER"));
@@ -45,12 +45,12 @@ public class SecServiceApplication {
       //      accountService.addRoleToUser("admin","USER");
      //       accountService.addRoleToUser("admin","ADMIN");
       //     accountService.addRoleToUser("user2","USER");
-      //      accountService.addRoleToUser("user2","CUSTOMMER_MANAGER");
+            accountService.addRoleToUser("admin","CUSTOMMER_MANAGER");
        //    accountService.addRoleToUser("user3","USER");
          //  accountService.addRoleToUser("user3","PRODUCT_MANAGER");
        //     accountService.addRoleToUser("user4","USER");
        //    accountService.addRoleToUser("user4","BILLS_MANAGER");
 
-     //   };
-//}
+       };
+}
 }
